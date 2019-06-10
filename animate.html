@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Sample HTML</title>
+		<script src="api.js"></script>
+		<style>
+			#box{position:relative;height:100px;width:100px;background:lavender;border:5px solid red;}
+		</style>
+	</head>
+	<body>
+	
+		<script>
+			$(document).ready(function(){
+				
+				$("button").click(function(){
+					$("#box").animate({"width":"200px"});
+					$("#box").animate({"height":"200px"});
+					$("#box").animate({"width":"100px"},2000);
+					$("#box").animate({"height":"100px"});
+					$("#box").animate({"borderRadius":"50px"});
+					$("#box").animate({"top":"300px","left":"300px"});
+				});
+				
+			});
+		</script>
+		
+		<button>Click Here</button>
+		
+		<p id="box"></p>
+		
+	
+	</body>
+</html>

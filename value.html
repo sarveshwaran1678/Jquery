@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Sample HTML</title>
+		<script src="api.js"></script>
+		<style>
+			#box{}
+		</style>
+	</head>
+	<body>
+	
+		<script>
+			$(document).ready(function(){
+				
+				$("#btn").click(function(){
+				
+					var x=$("#txt").val();
+					//$("#box").html("<b>Hai</b>");
+					$("#box").html(x.toUpperCase());
+				});
+				
+				$("#txt").keyup(function(){
+					var x=$("#txt").val();
+					$("#box").html(x.toUpperCase());
+				});
+				
+			});
+		</script>
+		
+		<input type="text" id="txt" />
+		<button id="btn">Click Here</button>
+		
+		<p id="box">....</p>
+		
+	
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Sample HTML</title>
+		<script src="api.js"></script>
+		<style>
+			#msg{text-align:center;color:red;}
+		</style>
+	</head>
+	<body>
+	
+		<script>
+			$(document).ready(function(){
+				
+				$("#msg").hide();
+				
+				$("#log").submit(function(){
+				
+					var x=$("#uname").val();
+					var y=$("#pwd").val();
+				
+					var r_un=/^([a-zA-Z]{3,10})$/;
+					
+					if(!x.match(r_un))
+					{
+						$("#msg").html("Plz type UserName").show(1000).delay(1000).hide(1000);
+						$("#uname").focus();
+						return false;
+					}
+					
+				
+				});
+				
+			});
+		</script>
+		
+		<form action="new.php" method="post" id="log" align="center" name="log">
+			
+			User Name :
+			<input type="text" id="uname" name="uname" />
+			<br/><br/>
+			
+			Password :
+			<input type="password" id="pwd" name="pwd" />
+			<br/><br/>
+			
+			<input type="submit" id="sub" name="sub" value="Login" />
+			<input type="reset" id="res" name="res" value="Clear" />
+			
+		</form>
+		
+		<p id="msg"></p>
+	
+	</body>
+</html>
